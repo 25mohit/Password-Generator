@@ -1,0 +1,189 @@
+.generator-div {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  background-color: #141E3B;
+}
+
+.generator-div .container-generator {
+  width: 45%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1C2752;
+}
+
+.generator-div .container-generator .result-div {
+  width: 100%;
+  margin-top: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+  min-height: 65px;
+  max-height: 150px;
+  overflow: auto;
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.generator-div .container-generator .result-div #copy-icon {
+  margin-right: 5px;
+}
+
+.generator-div .container-generator .result-div #copy-icon:hover {
+  cursor: pointer;
+  color: #1C2752;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.generator-div .container-generator .result-div .passowrd-text {
+  word-wrap: break-word;
+}
+
+.generator-div .container-generator button {
+  margin-top: 15px;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  font-size: 17px;
+  --background:#efefef;
+  --border-color:linear-gradient(to bottom right, red , blue);
+  --border-width:.25em;
+  --edge-size:.5em;
+  position: relative;
+  isolation: isolate;
+  border: 0;
+  background: var(--background);
+  -webkit-clip-path: polygon(var(--edge-size) 0%, 100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0% var(--edge-size));
+          clip-path: polygon(var(--edge-size) 0%, 100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0% var(--edge-size));
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.generator-div .container-generator button::before,
+.generator-div .container-generator button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.generator-div .container-generator button::before {
+  background: var(--border-color);
+  z-index: -2;
+}
+
+.generator-div .container-generator button::after {
+  background: var(--background);
+  z-index: -1;
+  -webkit-clip-path: polygon(var(--border-width) calc(var(--edge-size) + var(--border-width) * .5), calc(var(--edge-size) + var(--border-width) * .5) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), calc(100% - calc(var(--edge-size) + var(--border-width) * .5)) calc(100% - var(--border-width)), var(--border-width) calc(100% - var(--border-width)));
+          clip-path: polygon(var(--border-width) calc(var(--edge-size) + var(--border-width) * .5), calc(var(--edge-size) + var(--border-width) * .5) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), calc(100% - calc(var(--edge-size) + var(--border-width) * .5)) calc(100% - var(--border-width)), var(--border-width) calc(100% - var(--border-width)));
+  -webkit-transition: -webkit-clip-path 500ms;
+  transition: -webkit-clip-path 500ms;
+  transition: clip-path 500ms;
+  transition: clip-path 500ms, -webkit-clip-path 500ms;
+}
+
+.generator-div .container-generator button:where(:hover, :focus) {
+  color: white;
+}
+
+.generator-div .container-generator button:where(:hover, :focus)::after {
+  -webkit-clip-path: polygon(calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), calc(100% - calc(var(--edge-size) + var(--border-width) * .5)) calc(100% - var(--border-width)), calc(100% - calc(var(--edge-size) + var(--border-width) * .5)) calc(100% - var(--border-width)));
+          clip-path: polygon(calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), calc(100% - calc(var(--edge-size) + var(--border-width) * .5)) calc(100% - var(--border-width)), calc(100% - calc(var(--edge-size) + var(--border-width) * .5)) calc(100% - var(--border-width)));
+}
+
+.generator-div .container-generator .features {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.generator-div .container-generator .features .checkbox-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  font-size: 20px;
+  margin: 10px 0;
+  color: white;
+}
+
+.generator-div .container-generator .features .checkbox-div .length-text {
+  margin-left: 5px;
+}
+
+.generator-div .container-generator .features .checkbox-div p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: gray;
+}
+
+.generator-div .container-generator .features .checkbox-div label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 20px;
+}
+
+.generator-div .container-generator .features .checkbox-div input[type=range] {
+  width: 100%;
+}
+
+@media screen and (max-width: 1170px) {
+  .generator-div .container-generator {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .generator-div .container-generator {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .generator-div .container-generator {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+/*# sourceMappingURL=Generator.css.map */

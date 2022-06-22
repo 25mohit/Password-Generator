@@ -1,0 +1,162 @@
+.generator-div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: #141E3B;
+        .container-generator{
+            width: 45%;
+            height: fit-content;
+            border-radius: 20px;
+            padding: 20px 0;
+            box-sizing: border-box;
+            // box-shadow: 1px 1px 5px 2px #1C2752;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1C2752;
+                .result-div{
+                    width: 100%;
+                    margin-top: 15px;
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+                    min-height: 65px;
+                    max-height: 150px;
+                    overflow: auto;
+                    background-color: orange;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: bold;
+                        #copy-icon{
+                            margin-right: 5px;
+                            &:hover{
+                                cursor: pointer;
+                                color: #1C2752;
+                                transition: 0.6s;
+                            }
+                    }
+                    .passowrd-text{
+                        word-wrap: break-word;
+                    }
+                }
+                button{
+                    margin-top: 15px;
+                    padding: 0.5em 1.5em;
+                    cursor: pointer;
+                    font-size:17px;
+                    --background:#efefef;
+                    --border-color:linear-gradient(to bottom right, red , blue);
+                    --border-width:.25em;
+                    --edge-size:.5em;
+                    position: relative;
+                    isolation: isolate;
+                    border: 0;
+                    background: var(--background);
+                    clip-path:polygon(var(--edge-size) 0%, 100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0% var(--edge-size));
+                    transition: color 1s;
+                }
+                button::before,
+                button::after{
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                }
+                button::before{
+                    background: var(--border-color);
+                    z-index: -2;
+                }
+                button::after{
+                    background: var(--background);
+                    z-index: -1;
+                    clip-path:polygon(
+                        var(--border-width)
+                        calc(var(--edge-size) + var(--border-width) * .5),
+                        calc(var(--edge-size) + var(--border-width) * .5) var(--border-width), 
+                        calc(100% - var(--border-width))  var(--border-width),
+                        calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), 
+                        calc(100% - calc(var(--edge-size) + var(--border-width) * .5))  
+                         calc(100% - var(--border-width)), 
+                         var(--border-width)  calc(100% - var(--border-width)), 
+                         );
+                         transition: clip-path 500ms;
+                }
+                button:where(:hover, :focus){
+                    color: white;
+                }
+                button:where(:hover, :focus)::after {
+                    clip-path:polygon(
+                        calc(100% - var(--border-width)) 
+                        calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), 
+
+                        calc(100% - var(--border-width))
+                         var(--border-width), 
+
+                        calc(100% - var(--border-width))  
+                        var(--border-width),
+
+                        calc(100% - var(--border-width)) 
+                        calc(100% - calc(var(--edge-size) + var(--border-width) * .5)), 
+
+                        calc(100% - calc(var(--edge-size) + var(--border-width) * .5))  
+                         calc(100% - var(--border-width)), 
+                         calc(100% - calc(var(--edge-size) + var(--border-width) * .5))  
+                         calc(100% - var(--border-width)), 
+                         );
+                }
+                .features{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    .checkbox-div{
+                        display: flex;
+                        align-items: center;
+                        text-align: left;
+                        font-size: 20px;
+                        margin: 10px 0;
+                        color: white;
+                        .length-text{
+                            margin-left: 5px;
+                        }
+                        p{
+                            margin: 0;
+                            padding: 0;
+                            font-size: 15px;
+                            color: gray;
+                        }
+                        label{
+                            user-select: none;
+                            margin-left: 20px;
+                        }
+                        input[type=range]{
+                            width: 100%;
+                        }
+                    }
+                }
+        }
+}
+@media screen and (max-width:1170px) {
+    .generator-div{
+            .container-generator{
+                    width: 70%;
+            }
+    }
+}
+@media screen and (max-width:760px) {
+    .generator-div{
+            .container-generator{
+                    width: 80%;
+            }
+    }
+}
+@media screen and (max-width:650px) {
+    .generator-div{
+            .container-generator{
+                    width: 100%;
+                    border-radius: 5px;
+            }
+    }
+}
