@@ -1,0 +1,45 @@
+.header-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-div .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+.header-div .header-container .icon-color {
+  color: gray;
+  margin-right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.header-div .header-container .icon-color:hover {
+  color: white;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+#light .header-container .icon-color {
+  color: gray;
+}
+
+#light .header-container .icon-color:hover {
+  color: #0000dd;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+/*# sourceMappingURL=Header.css.map */

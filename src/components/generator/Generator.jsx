@@ -4,7 +4,7 @@ import { number, uLetters, lLetters, sLetters } from '../assets/char'
 import {RiFileCopyLine } from 'react-icons/ri'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-export const Generator = () => {
+export const Generator = ({colorChange}) => {
     const [password, setPassword] = useState('')
     const [pRange, setPRange] = useState(0)
     const [upperCase, setUpperCase] = useState(false)
@@ -40,7 +40,7 @@ export const Generator = () => {
         return newPassword
     }
   return (
-    <div className='generator-div'>
+    <div className='generator-div' id={colorChange}>
                 <div className="container-generator">
                             <div className="result-div">
                                 <CopyToClipboard text={password}><RiFileCopyLine id='copy-icon'/></CopyToClipboard><div className="passowrd-text">{password}</div>
@@ -54,7 +54,7 @@ export const Generator = () => {
                             </div>
                                     <div className="checkbox-div">
                                             <input type="checkbox"checked={upperCase} onChange={e => setUpperCase(e.target.checked)} id='upperCase'/>
-                                            <label htmlFor="upperCase">Include Upeper Case</label>
+                                            <label htmlFor="upperCase">Include Upper Case</label>
                                     </div>
                                     <div className="checkbox-div">
                                             <input type="checkbox"checked={lowerCase} onChange={e => setLowerCase(e.target.checked)} id='lowerCase'/>

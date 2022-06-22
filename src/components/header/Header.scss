@@ -1,0 +1,36 @@
+.header-div{
+        // color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+            .header-container{
+                display: flex;
+                justify-content: right;
+                padding: 20px;
+                box-sizing: border-box;
+                align-items: center;
+                width: 100vw;
+                // background-color: #141E3B;
+                .icon-color{
+                    color: gray;
+                    margin-right: 20px;
+                    font-size: 30px;
+                    cursor: pointer;
+                    &:hover{
+                        color: white;
+                        transition: 0.6s;
+                    }
+                }
+        }
+}
+#light{
+    .header-container{
+        .icon-color{
+            color: gray;
+            &:hover{
+                color: rgb(0, 0, 221);
+                transition: 0.6s;
+            }
+        }
+    }
+}
