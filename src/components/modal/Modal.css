@@ -1,0 +1,130 @@
+.main-modal-div {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: red;
+}
+
+.main-modal-div .modal-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 70%;
+  padding: 0 40px;
+  padding-bottom: 30px;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.main-modal-div .modal-container .header-div {
+  background-color: white;
+  text-align: right;
+  width: 100%;
+}
+
+.main-modal-div .modal-container .header-div .close-icon {
+  top: -20px;
+  right: -20px;
+  position: absolute;
+  color: whitesmoke;
+  font-size: 40px;
+}
+
+.main-modal-div .modal-container .header-div .close-icon:hover {
+  cursor: pointer;
+  color: blueviolet;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.main-modal-div .modal-container .info-modal {
+  text-align: left;
+}
+
+.main-modal-div .modal-container .info-modal .faq {
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
+
+.main-modal-div .modal-container .info-modal ul li {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 32px;
+}
+
+.main-modal-div .modal-container .info-modal ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-modal-div .modal-container .info-modal ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+}
+
+.main-modal-div .modal-container .info-modal .info-footer-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.main-modal-div .modal-container .info-modal .info-footer-modal a {
+  text-decoration: none;
+}
+
+.main-modal-div .modal-container .info-modal .info-footer-modal a .social-icon {
+  color: white;
+  font-size: 25px;
+}
+
+.main-modal-div .modal-container .info-modal .info-footer-modal a .social-icon:hover {
+  cursor: pointer;
+  color: blueviolet;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+#light .modal-container {
+  background-color: orange;
+}
+
+#light .modal-container .header-div .close-icon {
+  color: red;
+}
+
+#light .modal-container .header-div .close-icon:hover {
+  cursor: pointer;
+  color: white;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+/*# sourceMappingURL=Modal.css.map */

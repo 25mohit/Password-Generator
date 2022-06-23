@@ -6,19 +6,16 @@
     align-items: center;
     top: 0;
     left: 0;
-    // background-color: #141E3B;
         .container-generator{
             width: 45%;
             height: fit-content;
             border-radius: 20px;
             padding: 20px 0;
             box-sizing: border-box;
-            // box-shadow: 1px 1px 5px 2px #1C2752;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // background-color: #1C2752;
                 .result-div{
                     width: 100%;
                     margin-top: 15px;
@@ -180,7 +177,7 @@
                             border-radius: 5px;
                             font-size: 18px;
                             border: 1px solid rgb(180, 180, 180);
-                            margin: 5px 0;
+                            margin: 7px 0;
                             width: 50%;
                             &::placeholder{
                                 font-size: 15px;
@@ -206,6 +203,8 @@
         color: gray;
         user-select: none;
         &:hover{
+            color: black;
+            transition: 0.6s;
             cursor: pointer;
         }
     }
@@ -224,10 +223,10 @@
             color: black;
         }
         .result-div{
-            background-color: rgba(154, 154, 154,0.6);
+            background-color: rgba(194, 194, 194, 0.6);
             color: #03a9f4;
             .passowrd-text{
-                color: whitesmoke;
+                color: rgb(87, 87, 87);
             }
             &:hover{
                 cursor: pointer;

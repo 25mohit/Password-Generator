@@ -1,0 +1,21 @@
+.footer-div-main{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding:0 20px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    .icon-footer{
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        color:gray;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

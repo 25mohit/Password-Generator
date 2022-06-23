@@ -1,0 +1,68 @@
+.error-modal-window .container-modal {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+}
+
+.error-modal-window .container-modal .sidebar {
+  width: 7px;
+  height: 60%;
+  margin: 0 10px;
+  border-radius: 20px;
+}
+
+.error-modal-window .container-modal .mesage {
+  font-weight: bold;
+  margin-right: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.error-modal-window .container-modal .mesage {
+  cursor: pointer;
+}
+
+#er .container-modal {
+  border: 3px solid red;
+  background-color: white;
+}
+
+#er .container-modal .sidebar {
+  background-color: red;
+}
+
+#er .container-modal .mesage {
+  color: red;
+}
+
+#su .container-modal {
+  border: 3px solid green;
+  background-color: white;
+}
+
+#su .container-modal .sidebar {
+  background-color: green;
+}
+
+#su .container-modal .mesage {
+  color: green;
+}
+/*# sourceMappingURL=ErrorModal.css.map */

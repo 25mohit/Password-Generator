@@ -226,7 +226,7 @@
   border-radius: 5px;
   font-size: 18px;
   border: 1px solid #b4b4b4;
-  margin: 5px 0;
+  margin: 7px 0;
   width: 50%;
 }
 
@@ -284,6 +284,9 @@
 }
 
 .footer-div .adnanced-text:hover {
+  color: black;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   cursor: pointer;
 }
 
@@ -308,12 +311,12 @@
 }
 
 #light .container-generator .result-div {
-  background-color: rgba(154, 154, 154, 0.6);
+  background-color: rgba(194, 194, 194, 0.6);
   color: #03a9f4;
 }
 
 #light .container-generator .result-div .passowrd-text {
-  color: whitesmoke;
+  color: #575757;
 }
 
 #light .container-generator .result-div:hover {

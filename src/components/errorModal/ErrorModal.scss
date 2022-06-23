@@ -1,0 +1,54 @@
+.error-modal-window{
+    .container-modal{
+            margin-right: 20px;
+            margin-bottom: 20px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            backdrop-filter: blur(3px);
+            width: fit-content;
+            height: 40px;
+            .sidebar{
+                width: 7px;
+                height: 60%;
+                margin:0 10px;
+                border-radius: 20px;
+            }
+                .mesage{
+                        font-weight: bold;
+                        margin-right:15px;
+                        user-select: none;
+                        &{
+                            cursor: pointer;
+                        }
+                }
+        }
+}
+#er{
+    .container-modal{
+        border: 3px solid red;
+        background-color: rgba(255,255,255,1);
+        .sidebar{
+            background-color: red;
+        }
+        .mesage{
+            color: red;
+        }
+    }
+}
+#su{
+    .container-modal{
+        border: 3px solid green;
+        background-color: rgba(255,255,255,1);
+        .sidebar{
+            background-color: green;
+        }
+        .mesage{
+            color: green;
+        }
+    }
+}

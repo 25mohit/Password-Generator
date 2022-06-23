@@ -3,6 +3,7 @@ import './Generator.css'
 import { number, uLetters, lLetters, sLetters } from '../assets/char'
 import {RiFileCopyLine } from 'react-icons/ri'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { ErrorModal } from '../errorModal/ErrorModal'
 
 export const Generator = ({colorChange}) => {
     const [password, setPassword] = useState('')
@@ -13,6 +14,8 @@ export const Generator = ({colorChange}) => {
     const [numbers, setNumbers] = useState(false)
     const [advanced, setAdvanced] = useState(true)
     const [pLength, setPLength] = useState()
+    const [showError, setShowError] = useState(false)
+    const [copyError, setCopyError] = useState(false)
 
     const generatePassword = (e) => {
         e.preventDefault()
@@ -34,13 +37,13 @@ export const Generator = ({colorChange}) => {
     }
     if(pLength>5000){
         setPLength(5000)
-        alert('cant')
+        setShowError(true)
     }
     const advancedHandler = () => {
         setAdvanced(!advanced)
         setPLength(0)
     }
-    
+
     const createPassword = (charList) => {
         let newPassword = ''
         const charListLength = charList.length
@@ -58,7 +61,7 @@ export const Generator = ({colorChange}) => {
         {/* {random} */}
                 <form className="container-generator">
                             <div className="result-div">
-                                <CopyToClipboard text={password}><RiFileCopyLine id='copy-icon'/></CopyToClipboard><div className="passowrd-text">{password}</div>
+                                <CopyToClipboard text={password}><RiFileCopyLine id='copy-icon' onClick={() => {setCopyError(true)}}/></CopyToClipboard><div className="passowrd-text">{password}</div>
                             </div>
                             <button onClick={ generatePassword }>GENERATE</button>
                             <div className="features">
@@ -92,6 +95,9 @@ export const Generator = ({colorChange}) => {
                                     <p className="adnanced-text" onClick={ advancedHandler }>ADVANCED</p>
                             </div>
                 </form>
+                {showError &&  <ErrorModal id='er' message={ "Maximum length 5000 Allowed !"} setShowError={ setShowError }/> }
+                {copyError &&  <ErrorModal id='su' message={ "Successfully Copied !"} setShowError={ setCopyError }/> }
+               
     </div>
   )
 }
