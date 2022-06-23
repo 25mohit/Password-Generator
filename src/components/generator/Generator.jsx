@@ -6,14 +6,17 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 export const Generator = ({colorChange}) => {
     const [password, setPassword] = useState('')
-    const [pRange, setPRange] = useState(0)
+    const [pRange, setPRange] = useState(1)
     const [upperCase, setUpperCase] = useState(false)
     const [lowerCase, setLowerCase] = useState(false)
     const [specialChara, setSpecialChara] = useState(false)
     const [numbers, setNumbers] = useState(false)
+    const [advanced, setAdvanced] = useState(true)
+    const [pLength, setPLength] = useState()
 
-    const generatePassword = () => {
-        
+    const generatePassword = (e) => {
+        e.preventDefault()
+
         let charList = ""
         if(upperCase){
             charList = charList +uLetters
@@ -29,29 +32,45 @@ export const Generator = ({colorChange}) => {
         }
         setPassword(createPassword(charList))
     }
+    if(pLength>5000){
+        setPLength(5000)
+        alert('cant')
+    }
+    const advancedHandler = () => {
+        setAdvanced(!advanced)
+        setPLength(0)
+    }
+    
     const createPassword = (charList) => {
         let newPassword = ''
         const charListLength = charList.length
+        var length = pLength?pLength:pRange
 
-        for(let i=0;i<pRange;i++){
+        for(let i=0;i<length;i++){
             const charIndex = Math.round(Math.random()*charListLength)
             newPassword = newPassword + charList.charAt(charIndex)
         }
         return newPassword
     }
+
   return (
-    <div className='generator-div' id={colorChange}>
-                <div className="container-generator">
+    <div className='generator-div' id={ colorChange==1?'dark':'light' }>
+        {/* {random} */}
+                <form className="container-generator">
                             <div className="result-div">
                                 <CopyToClipboard text={password}><RiFileCopyLine id='copy-icon'/></CopyToClipboard><div className="passowrd-text">{password}</div>
                             </div>
                             <button onClick={ generatePassword }>GENERATE</button>
                             <div className="features">
+                            {advanced ?
                             <div className="checkbox-div">
                                     {pRange}
                                     <input type="range" min="1" max="100" value={pRange} onChange={e=>setPRange(e.target.value)}/>100
                                     <p className="length-text">Length</p>
-                            </div>
+                            </div>:
+                            <div className="advanced-div">
+                                    <input type="number" value={pLength} onChange={e => setPLength(e.target.value)} placeholder='Password Length' min='1' max='5000' required/>
+                            </div>}
                                     <div className="checkbox-div">
                                             <input type="checkbox"checked={upperCase} onChange={e => setUpperCase(e.target.checked)} id='upperCase'/>
                                             <label htmlFor="upperCase">Include Upper Case</label>
@@ -69,7 +88,10 @@ export const Generator = ({colorChange}) => {
                                             <label htmlFor="specialChara">Include Special Case</label>
                                     </div>
                             </div>
-                </div>
+                            <div className="footer-div">
+                                    <p className="adnanced-text" onClick={ advancedHandler }>ADVANCED</p>
+                            </div>
+                </form>
     </div>
   )
 }

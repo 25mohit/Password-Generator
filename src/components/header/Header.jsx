@@ -4,9 +4,9 @@ import { IoIosColorPalette } from 'react-icons/io'
 
 export const Header = ({ setColorChange, colorChange}) => {
   return (
-    <div className='header-div' id={colorChange}>
+    <div className='header-div' id={ colorChange==1 ? 'dark':'light' }>
         <div className="header-container">
-            <IoIosColorPalette className='icon-color' onClick={() => setColorChange(colorChange == 'dark' ? 'light' : 'dark')}/>
+            <IoIosColorPalette className='icon-color' onClick={() => setColorChange(colorChange == 1 ? 0 : 1)}/>
         </div>
     </div>
   )
